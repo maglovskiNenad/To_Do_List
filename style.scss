@@ -1,0 +1,127 @@
+@import "./vectors/mixins";
+
+// body
+body {
+  background-color: $darkBlue;
+  color: $lightBlue;
+  font-family: $roboto;
+}
+
+// hedear
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  .title {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    h1 {
+      text-transform: uppercase;
+      font-weight: 500;
+      color: $orange;
+    }
+  }
+}
+
+// main
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  .main_container {
+    background-color: $orange;
+    padding: 1em;
+    border: 1px solid $orange;
+    border-radius: 5px;
+    box-shadow: $orange 0px 7px 29px 0px;
+    .container {
+      padding: 1em;
+      input {
+        width: 400px;
+        height: 40px;
+        text-align: left;
+        font-family: $roboto;
+        border: 1px solid $orange;
+        border-radius: 5px;
+        font-size: 1em;
+        box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+      }
+      .btn {
+        width: 100px;
+        height: 44px;
+        border-radius: 5px;
+        border: 1px solid $orange;
+        background-color: $lightDarkBlue;
+        color: $orange;
+        text-transform: uppercase;
+        font-family: $roboto;
+        text-shadow: 1px 1px 5px $orange;
+      }
+    }
+  }
+}
+
+.todos_container {
+  .todos {
+    width: 95%;
+    margin: auto;
+    opacity: 0.7;
+    .todo {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-transform: uppercase;
+      font-weight: 300;
+      border-bottom: 1px solid $darkBlue;
+
+      .remove_todo_btn {
+        border: none;
+        background-color: $orange;
+        .material-symbols-outlined {
+          font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+          color: $lightBlue;
+        }
+      }
+    }
+  }
+}
+
+// overlay
+.overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.91);
+  z-index: 2;
+  cursor: pointer;
+  .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 17px;
+    color: white;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    font-family: $roboto;
+    color: $orange;
+    font-weight: 100;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transform: 0.5s ease-in-out;
+    text-align: center;
+    width: 100%;
+  }
+}
